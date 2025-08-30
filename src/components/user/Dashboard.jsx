@@ -19,7 +19,7 @@ const Dashboard = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/products')
+    axios.get('https://api-barcode.mkemalp.icu/api/products')
       .then((response) => {
         setProducts(response.data);
       })
@@ -261,7 +261,7 @@ const Dashboard = () => {
 
   const fetchProducts = () => {
     setLoading(true);
-    axios.get('http://localhost:5000/api/products')
+    axios.get('https://api-barcode.mkemalp.icu/api/products')
       .then((response) => {
         setProducts(response.data);
         setLoading(false);

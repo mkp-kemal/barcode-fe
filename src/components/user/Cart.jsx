@@ -21,7 +21,7 @@ const Cart = ({
     const handlePayment = async (barcode, quantity) => {
         setLoading(true);
         try {
-            const response = await axios.post('http://localhost:5000/api/pay', {
+            const response = await axios.post('https://api-barcode.mkemalp.icu/api/pay', {
                 barcode,
                 quantity,
             });

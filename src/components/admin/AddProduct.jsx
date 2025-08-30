@@ -57,7 +57,7 @@ const AddProduct = () => {
         }
 
         // Send product data to the backend to save in productList.json
-        axios.post('http://localhost:5000/api/addProduct', newProduct)
+        axios.post('https://api-barcode.mkemalp.icu/api/addProduct', newProduct)
             .then((response) => {
                 notification.success({
                     message: 'Product Added',

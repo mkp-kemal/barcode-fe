@@ -23,7 +23,7 @@ const DashboardPanel = () => {
 
   const fetchProducts = () => {
     setLoading(true);
-    axios.get('http://localhost:5000/api/products')
+    axios.get('https://api-barcode.mkemalp.icu/api/products')
       .then((response) => {
         setProducts(response.data);
         setLoading(false);
@@ -58,7 +58,7 @@ const DashboardPanel = () => {
   };
 
   const handleSaveEdit = () => {
-    axios.put(`http://localhost:5000/api/editProduct/${currentProduct.barcode}`, currentProduct)
+    axios.put(`https://api-barcode.mkemalp.icu/api/editProduct/${currentProduct.barcode}`, currentProduct)
       .then(() => {
         notification.success({
           message: 'Success',
@@ -77,7 +77,7 @@ const DashboardPanel = () => {
   };
 
   const handleDeleteProduct = (barcode) => {
-    axios.delete(`http://localhost:5000/api/deleteProduct/${barcode}`)
+    axios.delete(`https://api-barcode.mkemalp.icu/api/deleteProduct/${barcode}`)
       .then(() => {
         notification.success({
           message: 'Success',
